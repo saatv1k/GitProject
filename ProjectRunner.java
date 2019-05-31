@@ -1,14 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package gitproject;
+package ProjectRunner;
 
-/**
- *
- * @author Saatvik
- */
-public class ProjectRunner {
+import gitproject.GitInterface;
+import gitproject.GitProject;
+
+public class ProjectRunner implements GitInterface{
+
+    @Override
+    public void doStuff(float a, float b) {
+        
+    }
+    
+    public static void main(String[]args){
+        GitProject gitProject = (a,b) -> System.out.printf("'%.3f'%n",a/b);
+        gitProject.doStuff(3402, 10000);
+    }
     
 }
